@@ -10,14 +10,14 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
+    // Вызывается после выгрузки приложения в память
+    // (вызывается самый первым в жизненном цикле приложения и передаёт управление приложением в SceneDelegate)
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        print(#function)
         return true
     }
 
     // MARK: UISceneSession Lifecycle
-
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
 
@@ -29,7 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     }
     
-    // Вызывается для сохранения информации
+    // Вызывается перед выгрузкой приложения из памяти
+    // происхотит изменение сохранения в базе данных (тут все сохраняется)
+    // метод вызывается всегда, даже при краше
     func applicationWillTerminate(_ application: UIApplication) {
         print(#function)
     }
