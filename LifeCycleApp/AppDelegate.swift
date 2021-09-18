@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     // Вызывается перед выгрузкой приложения из памяти
-    // происхотит изменение сохранения в базе данных (тут все сохраняется)
+    // происходит изменение сохранения в базе данных (тут все сохраняется)
     // метод вызывается всегда, даже при краше
     func applicationWillTerminate(_ application: UIApplication) {
         print(#function)

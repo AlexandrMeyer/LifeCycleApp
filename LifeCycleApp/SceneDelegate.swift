@@ -13,11 +13,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     // Вызывается сразу после метода application didFinishLaunchingWithOptions
     // Тут можно определять интерфейс приложения в зависсимости от типа устройства на котором оно запущенно.
-    // Тут определяется стартовй ViewController если мы работаем без Storyboard.
-    // Тут происходит инициализация Push уведомлений (запрос на разрешения на их показ)
+    // Тут определяется стартовый ViewController если мы работаем без Storyboard.
+    // Тут происходит инициализация Push уведомлений (запрос разрешения на их показ)
     // Происходит загрузка первичных данных из базы
-    // Можно сделать глобальные изменения интерфейса (цвет navigationBar, цвет заголовка и т.д. что бы не менять в каждом ViewControllere)
-    // Тут определяется стартовый ViewController
+    // Можно сделать глобальные изменения интерфейса (цвет navigationBar, цвет заголовка и т.д. что бы не менять в каждом ViewController)
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // пример как назначить основной ViewController (определяем в guard let windowScene)
         guard let _ = (scene as? UIWindowScene) else { return }
